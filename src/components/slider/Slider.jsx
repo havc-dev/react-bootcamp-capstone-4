@@ -1,13 +1,10 @@
-import { useState } from 'react';
 import { SliderBtn } from '../common/buttons/SliderBtn';
 
 import styled from 'styled-components';
 
 const Slider = ({ items }) => {
 	//items == data.results
-	// console.log(items);
 
-	const [slideIndex, setSlideIndex] = useState(1);
 	return (
 		<SliderWrapper>
 			{items?.map((slide, index) => (
