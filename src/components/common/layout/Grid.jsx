@@ -1,23 +1,21 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const Grid = styled.ul`
-	max-width: ${({ theme }) => theme.sizes.sm};
-	display: grid;
-	grid-gap: 1rem;
-	grid-auto-columns: 1fr;
-	grid-template-columns: repeat(
-		auto-fit,
-		minmax(${({ theme }) => theme.sizes.xs}, 1fr)
-	);
-	margin: 0;
-	padding: 0;
+export const Grid = styled.div`
+	margin: 0 auto;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 `;
 
-export const GridItem = styled.li`
-	margin: ${({ theme }) => theme.spacing.s} 0;
+export const GridItem = styled.div`
 	box-shadow: ${({ theme }) => theme.shadows.small};
 	transition: 0.3s all ease-in-out;
 	list-style-type: none;
+	display: flex;
+	justify-content: center;
+	padding: ${({ theme }) => theme.spacing.s};
+	width: clamp(260px, 30vw, 80vw);
 	&:hover {
 		transform-origin: center;
 		transform: rotateX(-5deg) rotateY(-8deg);
